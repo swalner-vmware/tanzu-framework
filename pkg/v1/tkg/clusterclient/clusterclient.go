@@ -77,8 +77,9 @@ import (
 )
 
 const (
-	kubectlApplyRetryTimeout  = 30 * time.Second
-	kubectlApplyRetryInterval = 5 * time.Second
+	kubectlApplyRetryTimeout  = 830 * time.Second
+	kubectlApplyRetryInterval = 15 * time.Second
+
 	// DefaultKappControllerHostPort is the default kapp-controller port for it's extension apiserver
 	DefaultKappControllerHostPort           = 10100
 	waitPeriodBeforePollingForUpgradeStatus = 60 * time.Second
