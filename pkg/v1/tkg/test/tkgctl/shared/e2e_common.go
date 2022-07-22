@@ -216,7 +216,7 @@ func E2ECommonSpec(ctx context.Context, inputGetter func() E2ECommonSpecInput) {
 				By(fmt.Sprintf("Verify workload cluster %q resources have been deleted", clusterName))
 				Eventually(func() bool {
 					return clusterResourcesDeleted(ctx, mngClient, clusterResources)
-				}, waitTimeout, pollingInterval).Should(BeTrue())
+				}, 2*waitTimeout, pollingInterval).Should(BeTrue())
 			}
 		}
 
